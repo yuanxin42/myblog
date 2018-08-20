@@ -5,6 +5,8 @@ import blogindex from '@/components/myIndex'
 import diary from '@/components/diary'
 import myfeel from '@/components/myfeel'
 import allComponents from '@/components/allComponents'
+import details from '@/components/allComponents/details'
+import compomentblock from '@/components/allComponents/compomentblock'
 Vue.use(Router)
 
 export default new Router({
@@ -24,7 +26,17 @@ export default new Router({
         },
         {
           path: 'allComponents',
-          component: allComponents
+          component: allComponents,
+          children: [
+            {
+              path: '/',
+              component: compomentblock
+            },
+            {
+              path: 'details',
+              component: details
+            }
+          ]
         },
         {
           path: 'myfeel',
