@@ -1,27 +1,5 @@
 <template>
-    <div>
-        <!-- <el-row>
-                                                                                <el-col :span="12">
-                                                                                    <div class="demo-input-suffix">
-                                                                                        属性方式：
-                                                                                        <el-input size="medium" placeholder="请选择日期" suffix-icon="el-icon-date" v-model="input2">
-                                                                                        </el-input>
-                                                                                        <el-input size="medium" placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input21">
-                                                                                        </el-input>
-                                                                                    </div>
-                                                                                </el-col>
-                                                                                <el-col :span="12">
-                                                                                    <div class="demo-input-suffix">
-                                                                                        slot 方式：
-                                                                                        <el-input size="medium" placeholder="请选择日期" v-model="input22">
-                                                                                            <i slot="suffix" class="el-input__icon el-icon-date"></i>
-                                                                                        </el-input>
-                                                                                        <el-input size="medium" placeholder="请输入内容" v-model="input23">
-                                                                                            <i slot="prefix" class="el-input__icon el-icon-search"></i>
-                                                                                        </el-input>
-                                                                                    </div>
-                                                                                </el-col>
-                                                                            </el-row> -->
+    <div class="clothes">
         <el-row>
             <el-col class="card" :span="5" v-for="(o) in 6" :key="o" :offset="2">
                 <router-link tag='span' to="./allComponents/details">
@@ -54,11 +32,7 @@ export default {
   data () {
     return {
       activeIndex: '1',
-      currentDate: new Date(),
-      input2: '',
-      input21: '',
-      input22: '',
-      input23: ''
+      currentDate: new Date()
     }
   },
   methods: {

@@ -35,8 +35,11 @@
                     </el-menu-item>
                 </el-menu>
             </el-col>
-            <el-col :span="20">
-                <router-view/>
+            <el-col :offset="1" :span="18">
+                <div class="clothes-tit"></div>
+                <div class="clothes">
+                    <router-view/>
+                </div>
             </el-col>
         </el-row>
 
@@ -61,7 +64,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+ .clothes{
+    background: #fff;
+    /* padding: 20px 20px 20px 20px; */
+}
 .el-menu-vertical-demo {
     height: 1000px;
+}
+.clothes-tit{
+    width: 100%;
+    height: 60px;
+    background: #eeeaea;
 }
 </style>
