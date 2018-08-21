@@ -1,6 +1,6 @@
 # vuetest
 
-> A Vue.js project
+> A Vue.js project   --------  不要慌，，此项目持续开发中
 
 ## Build Setup
 
