@@ -17,6 +17,10 @@ export default new Router({
       component: index,
       children: [
         {
+          path: '/',
+          component: blogindex
+        },
+        {
           path: 'index',
           component: blogindex
         },
