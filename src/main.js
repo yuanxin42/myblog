@@ -5,11 +5,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import sir from 'sirpackages'
 
 import 'element-ui/lib/theme-chalk/index.css'
 import eleconfig from './components/elecomponent/index.js'
 Vue.use(eleconfig)
 Vue.use(ElementUI)
+Vue.use(sir)
 
 Vue.config.productionTip = false
 

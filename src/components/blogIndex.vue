@@ -1,40 +1,45 @@
 <template>
-  <div>
-    <el-row>
-      <el-menu :default-active="activeIndex" :router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#3a5163" text-color="#fff" active-text-color="#ffd04b">
-        <el-col class="title" :span="4">
-          <el-menu-item :router="false" index="/" background-color="#fff">
-            <el-row>
-              <el-col class="tit-logo" :span="17">
-              </el-col>
-              <el-col class="tit-letter" :span="3">
-                My博客
-              </el-col>
-              <!-- <img src="@/assets/image/023504o9N.jpg">  -->
-            </el-row>
-          </el-menu-item>
-        </el-col>
-        <el-col class="title" :span="3">
-          <el-menu-item index="/index">
-            <!-- <router-link tag='span' to="/allComponents/details"> -->
-              首页
-            <!-- </router-link> -->
-          </el-menu-item>
-        </el-col>
-        <el-col class="title" :span="3">
-          <el-menu-item index="/diary">我的日记</el-menu-item>
-        </el-col>
-        <el-col class="title" :span="3">
-          <el-menu-item index="/allComponents">demo组件库</el-menu-item>
-        </el-col>
-        <el-col class="title" :span="3">
-          <el-menu-item index="/myfeel">读书感受</el-menu-item>
-        </el-col>
-        <el-col class="title" :span="3">
-          <el-menu-item disabled index="/myfeel">源码心得</el-menu-item>
-        </el-col>
-      </el-menu>
-    </el-row>
+  <div class="blog">
+    <sir-navmenu>
+      <div slot="navtop">
+        <a class="logolink" href="https://2heng.xin" alt="樱花庄的白猫">
+          <span class="sakurasono"> さくら
+            <ruby style="ruby-position:over;">荘
+              <rp></rp>
+              <rt>そ</rt>
+              <rp></rp>
+            </ruby>の</span>
+          <span class="shironeko">
+            <ruby style="ruby-position:over;">白
+              <rp></rp>
+              <rt>しろ</rt>
+              <rp></rp>猫
+              <rp></rp>
+              <rt>ねこ</rt>
+              <rp></rp>
+            </ruby>
+          </span>
+        </a>
+      </div>
+      <div slot="allsubmenu" class="blogitems">
+        <sir-submenu class="submenu">首页</sir-submenu>
+        <sir-submenu class="submenu">归档</sir-submenu>
+        <sir-submenu class="submenu">清单</sir-submenu>
+        <sir-submenu class="submenu">留言板</sir-submenu>
+        <sir-submenu class="submenu">友人帐</sir-submenu>
+        <sir-submenu class="submenu">关于</sir-submenu>
+        <sir-submenu class="submenu">关于</sir-submenu>
+        <sir-submenu class="submenu">关于</sir-submenu>
+      </div>
+    </sir-navmenu>
+    <div class="headertop">
+      <sir-scrolltop></sir-scrolltop>
+      <div class="bolang1"></div>
+      <div class="bolang2"></div>
+    </div>
+    <router-view/>
+    <router-view/>
+    <router-view/>
     <router-view/>
   </div>
 </template>
@@ -55,28 +60,62 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.el-menu-demo {
-  border: 0;
+.blog {
+  width: 100%;
+  height: 100%;
+  text-shadow: 0 0 1px rgba(0,0,0,.1);
 }
 
-.title {
-  text-align: center;
-}
-
-.title:first-child .tit-logo {
+.logolink {
+  color: #464646;
+  float: left;
+  font-size: 20px;
+  font-weight: 800;
   height: 56px;
-  background: url('../assets/image/023504o9N1.jpg') no-repeat;
-  background-size: 100% 100%;
+  line-height: 56px;
+  padding-left: 35px;
+  padding-right: 15px;
+  padding-top: 11px;
+  text-decoration-line: none;
 }
 
-.title:first-child .tit-letter {
-  font-size: 16px;
+.sakurasono {
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 5px;
+  color: #464646;
+  height: auto;
+  line-height: 25px;
+  margin-right: 0;
+  padding-bottom: 0;
+  padding-top: 1px;
+  text-size-adjust: 100%;
+  width: auto;
 }
-
-/* .title:first-child img{
-       display: inline-block;
-        height: 56px;
-    } */
+.blogitems .submenu{
+  color: #666;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 28px;
+}
+.headertop {
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.2/cover/webp/199-bigskin-3.jpg.webp') no-repeat;
+  background-size: cover;
+   position: relative;
+   z-index: -1;
+}
+.bolang1,.bolang2{
+    height: 75px;
+    width: 100%;
+    background: url('../assets/image/wave1.png');
+    position: absolute;
+    bottom: 0;
+}
+.bolang2{
+  bottom: 20px;
+  left: -50px;
+  background: url('../assets/image/wave2.png') repeat-x;
+}
 </style>
