@@ -55,7 +55,25 @@ export default {
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
+    },
+    getlistdata () {
+      this.$ajax.get('/url').then(function (res) {
+        console.log(res)
+      }).catch(function (err) {
+        console.log(err)
+      })
     }
+  },
+  mounted () {
+    this.$ajax.get('/getdata', {
+      params: { // 请求参数
+        id: 123
+      }
+    }).then(function (response) {
+      console.log(response)// 请求正确时执行的代码
+    }).catch(function (response) {
+      console.log(response)// 发生错误时执行的代码
+    })
   }
 }
 </script>
@@ -64,7 +82,7 @@ export default {
 .blog {
   width: 100%;
   height: 100%;
-  text-shadow: 0 0 1px rgba(0,0,0,.1);
+  text-shadow: 0 0 1px rgba(0, 0, 0, .1);
 }
 
 .logolink {
@@ -92,28 +110,33 @@ export default {
   text-size-adjust: 100%;
   width: auto;
 }
-.blogitems .submenu{
+
+.blogitems .submenu {
   color: #666;
   font-weight: 600;
   font-size: 14px;
   margin-left: 28px;
 }
+
 .headertop {
   width: 100%;
   height: 100%;
   background: url('https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.2/cover/webp/199-bigskin-3.jpg.webp') no-repeat;
   background-size: cover;
-   position: relative;
-   z-index: -1;
+  position: relative;
+  z-index: -1;
 }
-.bolang1,.bolang2{
-    height: 75px;
-    width: 100%;
-    background: url('../assets/image/wave1.png');
-    position: absolute;
-    bottom: 0;
+
+.bolang1,
+.bolang2 {
+  height: 75px;
+  width: 100%;
+  background: url('../assets/image/wave1.png');
+  position: absolute;
+  bottom: 0;
 }
-.bolang2{
+
+.bolang2 {
   bottom: 20px;
   left: -50px;
   background: url('../assets/image/wave2.png') repeat-x;

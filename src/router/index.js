@@ -10,6 +10,7 @@ import compomentblock from '@/components/allComponents/compomentblock'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
