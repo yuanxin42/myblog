@@ -20,44 +20,20 @@
           </div>
         </div>
       </div>
-      <sir-scrolltop></sir-scrolltop>
       <div class="bolang1"></div>
       <!-- 波浪的两个图片-->
       <div class="bolang2"></div>
     </div>
-     <sir-table :data="tableData5">
-      <el-table-column label="商品 ID" prop="id">
-      </el-table-column>
-      <el-table-column label="商品名称" prop="name">
-      </el-table-column>
-      <el-table-column label="描述" prop="desc">
-      </el-table-column>
-    </sir-table>
+    <contain></contain>
   </div>
 </template>
 <script>
+import contain from './contain'
 export default {
   // name: 'HelloWorld',
   data () {
     return {
-      activeIndex: '1',
-      tableData5: [{
-        id: '12987122',
-        name: '好滋好味鸡蛋仔',
-        category: '江浙小吃、小吃零食',
-        desc: '荷兰优质淡奶，奶香浓而不腻',
-        address: '上海市普陀区真北路',
-        shop: '王小虎夫妻店',
-        shopId: '10333'
-      }, {
-        id: '12987123',
-        name: '好滋好味鸡蛋仔',
-        category: '江浙小吃、小吃零食',
-        desc: '荷兰优质淡奶，奶香浓而不腻',
-        address: '上海市普陀区真北路',
-        shop: '王小虎夫妻店',
-        shopId: '10333'
-      }]
+      activeIndex: '1'
     }
   },
   methods: {
@@ -82,6 +58,9 @@ export default {
     }).catch(function (response) {
       console.log(response)// 发生错误时执行的代码
     })
+  },
+  components: {
+    contain
   }
 }
 </script>

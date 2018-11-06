@@ -32,7 +32,7 @@
         <sir-submenu class="submenu">关于</sir-submenu>
       </div>
     </sir-navmenu>
-
+    <sir-scrolltop></sir-scrolltop>
     <router-view/>
   </div>
 </template>
