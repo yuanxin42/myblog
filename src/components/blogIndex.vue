@@ -32,34 +32,7 @@
         <sir-submenu class="submenu">关于</sir-submenu>
       </div>
     </sir-navmenu>
-    <div class="headertop">
-      <div class="focusinfo">
-        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">Hi, Mashiro!</h1>
-        <div class="header-info">
-          <p>
-            <i class="fa fa-quote-left"></i> You got to put the past behind you before you can move on.
-            <i class="fa fa-quote-right"></i>
-          </p>
-          <div class="top-social_v2">
-            <ul class="top-social-logo">
-              <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
-              <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
-              <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
-              <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
-              <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
-              <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <sir-scrolltop></sir-scrolltop>
-      <div class="bolang1"></div>
-      <!-- 波浪的两个图片-->
-      <div class="bolang2"></div>
-    </div>
-    <router-view/>
-    <router-view/>
-    <router-view/>
+
     <router-view/>
   </div>
 </template>
@@ -136,77 +109,5 @@ export default {
   font-weight: 600;
   font-size: 14px;
   margin-left: 28px;
-}
-
-.headertop {
-  width: 100%;
-  height: 100%;
-  background: url('https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.2/cover/webp/199-bigskin-3.jpg.webp') no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: -1;
-}
-
-.bolang1,
-.bolang2 {
-  height: 75px;
-  width: 100%;
-  background: url('../assets/image/wave1.png');
-  position: absolute;
-  bottom: 0;
-}
-
-.bolang2 {
-  bottom: 20px;
-  left: -50px;
-  background: url('../assets/image/wave2.png') repeat-x;
-}
-
-.focusinfo {
-  width: 800px;
-  height: 230px;
-  position: absolute;
-  top: calc(50% - 115px);
-  left: calc(50% - 400px);
-}
-
-.center-text {
-  width: 615px;
-  height: 100px;
-  font-size: 80px;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.header-info {
-  padding: 10px;
-  width: 500px;
-  height: auto;
-  margin: 20px auto;
-  text-align: center;
-  background: black;
-  opacity: 0.6;
-  border-radius: 10px;
-  font-size: 16px;
-  color: #eaeadf;
-  font-weight: 600;
-}
-.header-info p{
-  margin: 0 0 15px 0;
-}
-.top-social_v2 {
-  height: 100%;
-}
-
-.top-social-logo {
-  height: 40px;
-}
-
-.top-social-logo li {
-  width: 60px;
-  height: 40px;
-  float: left;
 }
 </style>
