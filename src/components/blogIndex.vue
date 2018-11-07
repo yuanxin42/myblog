@@ -1,6 +1,6 @@
 <template>
   <div class="blog">
-    <sir-navmenu class="sir-navmenu">
+    <sir-navmenu class="sir-navmenu" color='#fff'>
       <div slot="navtop">
         <a class="logolink" href="https://2heng.xin" alt="樱花庄的白猫">
           <span class="sakurasono"> さくら
@@ -76,9 +76,9 @@ export default {
   width: 100%;
   height: 100%;
   text-shadow: 0 0 1px rgba(0, 0, 0, .1);
-  .sir-navmenu{
-    z-index: 10;
-  }
+  // .sir-navmenu{
+  //   z-index: 10;
+  // }
 }
 
 .logolink {

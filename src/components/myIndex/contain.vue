@@ -23,24 +23,64 @@
         <div class="containCard">
             <h5 class="borderBottom"> Discovery</h5>
             <div>
-                <sir-card class="start-img" width='100%' height='300px'>
+                <sir-card class="start-img" location='left' width='100%' height='300px'>
                     <div slot="cardHeader">
                         <img class="cardHover" style="height:300px" src="@/assets/image/1099193574-1024x684.jpg" alt="">
                     </div>
+                    <div slot="cardFotter">
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                    </div>
                 </sir-card>
-                <sir-card class="start-img" width='100%' height='300px'>
+                <sir-card class="start-img" location='right' width='100%' height='300px'>
                     <div slot="cardHeader">
                         <img class="cardHover" style="height:300px" src="@/assets/image/child-1024x576.jpg" alt="">
                     </div>
+                    <div slot="cardFotter">
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                    </div>
                 </sir-card>
-                <sir-card class="start-img" width='100%' height='300px'>
+                <sir-card class="start-img" location='left' width='100%' height='300px'>
                     <div slot="cardHeader">
                         <img class="cardHover" style="height:300px" src="@/assets/image/sakura-1024x576.jpg" alt="">
                     </div>
+                    <div slot="cardFotter">
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                    </div>
                 </sir-card>
-                <sir-card class="start-img" width='100%' height='300px'>
+                <sir-card class="start-img" location='right' width='100%' height='300px'>
                     <div slot="cardHeader">
                         <img class="cardHover" style="height:300px" src="@/assets/image/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.jpg" alt="">
+                    </div>
+                    <div slot="cardFotter">
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
+                        <div class="cardTitle">
+                            <a href="https://github.com/yuanxin666/sir-zujian">
+                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+                        </div>
                     </div>
                 </sir-card>
             </div>
@@ -81,18 +121,18 @@ export default {
             .start-img {
                 border-radius: 10px;
                 .cardHover {
-                        display: block;
-                        width: 100%;
-                        height: 160px !important;
-                    }
+                    display: block;
+                    width: 100%;
+                    height: 160px !important;
+                }
                 /* margin-right: 10px; */
             }
         }
     }
-    .containCard{
+    .containCard {
         width: 780px;
         margin: 0 auto;
-        .start-img{
+        .start-img {
             margin-bottom: 30px;
             border-radius: 20px;
         }
