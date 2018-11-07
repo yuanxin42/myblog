@@ -1,6 +1,6 @@
 <template>
-  <div class="index">
-    <div class="headertop">
+  <div class="index" >
+    <div class="headertop" >
       <div class="focusinfo" @click="toclick">
         <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">Hi, Mashiro!</h1>
         <div class="header-info">
@@ -81,7 +81,6 @@ export default {
   background: url('https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.2/cover/webp/199-bigskin-3.jpg.webp') no-repeat;
   background-size: cover;
   position: relative;
-  z-index: -1;
 }
 
 .bolang1,
@@ -105,9 +104,7 @@ export default {
   position: absolute;
   top: calc(50% - 115px);
   left: calc(50% - 400px);
-  /* z-index: 2000;
-  background: red;
-  cursor: pointer; */
+  cursor: pointer;
 }
 
 .center-text {
@@ -123,28 +120,15 @@ export default {
 .header-info {
   padding: 10px;
   width: 500px;
+  background: rgba(0, 0, 0, 0.7);
   height: auto;
+   border-radius: 10px;
   margin: 20px auto;
   text-align: center;
   font-size: 16px;
   color: #eaeadf;
   font-weight: 600;
   position: relative;
-}
-
-.header-info:before {
-  background: black;
-  background-size: cover;
-  width: 520px;
-  height: 100px;
-  content: "";
-  position: absolute;
-  border-radius: 10px;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  /*-1 可以当背景*/
 }
 
 .header-info p {
@@ -155,7 +139,6 @@ export default {
 
 .top-social-logo {
   height: 40px;
-  /* cursor: pointer !important; */
   li {
     width: 60px;
     height: 40px;
