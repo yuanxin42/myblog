@@ -79,6 +79,7 @@ export default {
             height: 160px;
             border-radius: 10px;
             .start-img {
+                border-radius: 10px;
                 .cardHover {
                         display: block;
                         width: 100%;
@@ -93,6 +94,7 @@ export default {
         margin: 0 auto;
         .start-img{
             margin-bottom: 30px;
+            border-radius: 20px;
         }
     }
 }

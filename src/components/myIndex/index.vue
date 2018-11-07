@@ -1,7 +1,7 @@
 <template>
   <div class="index">
-     <div class="headertop">
-      <div class="focusinfo">
+    <div class="headertop">
+      <div class="focusinfo" @click="toclick">
         <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">Hi, Mashiro!</h1>
         <div class="header-info">
           <p>
@@ -10,12 +10,14 @@
           </p>
           <div class="top-social_v2">
             <ul class="top-social-logo">
+              <li class="logo-left-btn"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
+              <li class="logo-left-btn"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg" alt=""></li>
             </ul>
           </div>
         </div>
@@ -46,6 +48,9 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+    },
+    toclick () {
+      alert(2213)
     }
   },
   mounted () {
@@ -64,11 +69,12 @@ export default {
   }
 }
 </script>
-<style scoped>
-.index{
-    width: 100%;
+<style lang = 'less' scoped>
+.index {
+  width: 100%;
   height: 100%;
 }
+
 .headertop {
   width: 100%;
   height: 100%;
@@ -99,6 +105,9 @@ export default {
   position: absolute;
   top: calc(50% - 115px);
   left: calc(50% - 400px);
+  /* z-index: 2000;
+  background: red;
+  cursor: pointer; */
 }
 
 .center-text {
@@ -117,27 +126,52 @@ export default {
   height: auto;
   margin: 20px auto;
   text-align: center;
-  background: black;
-  opacity: 0.6;
-  border-radius: 10px;
   font-size: 16px;
   color: #eaeadf;
   font-weight: 600;
+  position: relative;
 }
-.header-info p{
+
+.header-info:before {
+  background: black;
+  background-size: cover;
+  width: 520px;
+  height: 100px;
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /*-1 可以当背景*/
+}
+
+.header-info p {
   margin: 0 0 15px 0;
 }
-.top-social_v2 {
-  height: 100%;
-}
+
+.top-social_v2 {}
 
 .top-social-logo {
   height: 40px;
-}
-
-.top-social-logo li {
-  width: 60px;
-  height: 40px;
-  float: left;
+  /* cursor: pointer !important; */
+  li {
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    cursor: pointer auto !important;
+  }
+  .logo-left-btn {
+    img {
+      width: 60px;
+      height: 30px;
+    }
+    &:first-child {
+      /* transform: translateX(50%) */
+      transform: rotateY(180deg);
+    }
+  }
 }
 </style>
