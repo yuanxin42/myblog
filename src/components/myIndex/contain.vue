@@ -23,9 +23,24 @@
         <div class="containCard">
             <h5 class="borderBottom"> Discovery</h5>
             <div>
-                <sir-card class="start-img" width='100%' height='380px'>
+                <sir-card class="start-img" width='100%' height='300px'>
                     <div slot="cardHeader">
-                        <img class="cardHover" src="@/assets/image/th(3).jpg" alt="">
+                        <img class="cardHover" style="height:300px" src="@/assets/image/1099193574-1024x684.jpg" alt="">
+                    </div>
+                </sir-card>
+                <sir-card class="start-img" width='100%' height='300px'>
+                    <div slot="cardHeader">
+                        <img class="cardHover" style="height:300px" src="@/assets/image/child-1024x576.jpg" alt="">
+                    </div>
+                </sir-card>
+                <sir-card class="start-img" width='100%' height='300px'>
+                    <div slot="cardHeader">
+                        <img class="cardHover" style="height:300px" src="@/assets/image/sakura-1024x576.jpg" alt="">
+                    </div>
+                </sir-card>
+                <sir-card class="start-img" width='100%' height='300px'>
+                    <div slot="cardHeader">
+                        <img class="cardHover" style="height:300px" src="@/assets/image/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.jpg" alt="">
                     </div>
                 </sir-card>
             </div>
@@ -76,6 +91,9 @@ export default {
     .containCard{
         width: 780px;
         margin: 0 auto;
+        .start-img{
+            margin-bottom: 30px;
+        }
     }
 }
 
