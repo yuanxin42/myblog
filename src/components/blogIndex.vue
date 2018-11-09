@@ -23,7 +23,7 @@
       </div>
       <div slot="allsubmenu" class="blogitems">
         <sir-submenu class="submenu">首页</sir-submenu>
-        <sir-submenu class="submenu">归档</sir-submenu>
+        <sir-submenu class="submenu">成长历程</sir-submenu>
         <sir-submenu class="submenu">清单</sir-submenu>
         <sir-submenu class="submenu">留言板</sir-submenu>
         <sir-submenu class="submenu">友人帐</sir-submenu>

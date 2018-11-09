@@ -2,7 +2,7 @@
   <div class="index" >
     <div class="headertop" >
       <div class="focusinfo" @click="toclick">
-        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">Hi, Mashiro!</h1>
+        <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">Go,sirpackage</h1>
         <div class="header-info">
           <p>
             <i class="fa fa-quote-left"></i> You got to put the past behind you before you can move on.
