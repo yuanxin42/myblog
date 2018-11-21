@@ -53,6 +53,7 @@ export default {
       alert(2213)
     }
   },
+  inject: ['foo'],
   mounted () {
     this.$ajax.get('/getdata', {
       params: { // 请求参数
@@ -63,6 +64,8 @@ export default {
     }).catch(function (response) {
       console.log(response)// 发生错误时执行的代码
     })
+    // this.foo()
+    console.log(this.foo, '我是inject')
   },
   components: {
     contain

@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/blogIndex'
+import index from '@/components/blogIndex.vue'
 import blogindex from '@/components/myIndex'
+import growthProcess from '@/components/growthProcess'
 import diary from '@/components/diary'
-import myfeel from '@/components/myfeel'
 import allComponents from '@/components/allComponents'
 import details from '@/components/allComponents/details'
 import compomentblock from '@/components/allComponents/compomentblock'
@@ -22,8 +22,8 @@ export default new Router({
           component: blogindex
         },
         {
-          path: 'index',
-          component: blogindex
+          path: 'growthProcess',
+          component: growthProcess
         },
         {
           path: 'diary',
@@ -42,10 +42,6 @@ export default new Router({
               component: details
             }
           ]
-        },
-        {
-          path: 'myfeel',
-          component: myfeel
         },
         {
           path: '4',

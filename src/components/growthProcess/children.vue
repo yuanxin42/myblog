@@ -1,15 +1,24 @@
 <template>
-  <h1>读书感受页</h1>
+  <div>
+    <h1>我是孩子页{{value}}</h1>
+  </div>
 </template>
 <script>
 export default {
-  // name: 'HelloWorld',
+  props: {
+    value: String
+  },
   data () {
     return {
       activeIndex: '1'
     }
   },
   methods: {
+  },
+  created () {
+
+  },
+  mounted () {
   }
 }
 </script>

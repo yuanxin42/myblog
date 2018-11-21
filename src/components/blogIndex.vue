@@ -23,7 +23,9 @@
       </div>
       <div slot="allsubmenu" class="blogitems">
         <sir-submenu class="submenu">首页</sir-submenu>
-        <sir-submenu class="submenu">成长历程</sir-submenu>
+        <sir-submenu class="submenu">
+          <a href="growthProcess">成长历程</a>
+        </sir-submenu>
         <sir-submenu class="submenu">清单</sir-submenu>
         <sir-submenu class="submenu">留言板</sir-submenu>
         <sir-submenu class="submenu">友人帐</sir-submenu>
@@ -55,7 +57,13 @@ export default {
       }).catch(function (err) {
         console.log(err)
       })
+    },
+    bar () {
+      alert(213123)
     }
+  },
+  provide: {
+    foo: this.bar
   },
   mounted () {
     this.$ajax.get('/getdata', {
@@ -72,13 +80,17 @@ export default {
 </script>
 
 <style lang='less' scoped>
+a {
+  color: #666;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
 .blog {
   width: 100%;
   height: 100%;
   text-shadow: 0 0 1px rgba(0, 0, 0, .1);
-  // .sir-navmenu{
-  //   z-index: 10;
-  // }
 }
 
 .logolink {
