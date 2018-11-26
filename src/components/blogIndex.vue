@@ -1,6 +1,7 @@
 <template>
   <div class="blog">
-    <sir-navmenu class="sir-navmenu" color='#fff'>
+    <!-- :issetlocation='menustyle' -->
+    <sir-navmenu class="sir-navmenu" :sirbac="menustyle?'transparent':'#fff'" declinecolor='#fff'  :isdeclinebackground='true'>
       <div slot="navtop">
         <a class="logolink" href="https://2heng.xin" alt="樱花庄的白猫">
           <span class="sakurasono"> さくら
@@ -22,7 +23,9 @@
         </a>
       </div>
       <div slot="allsubmenu" class="blogitems">
-        <sir-submenu class="submenu">首页</sir-submenu>
+        <sir-submenu class="submenu">
+          <a href="/">首页</a>
+        </sir-submenu>
         <sir-submenu class="submenu">
           <a href="growthProcess">成长历程</a>
         </sir-submenu>
@@ -45,6 +48,15 @@ export default {
   data () {
     return {
       activeIndex: '1'
+    }
+  },
+  watch: {
+  },
+  computed: {
+    menustyle () {
+      let href = window.location.href
+      let host = window.location.host
+      return href.split(host)[1] === '/'
     }
   },
   methods: {
