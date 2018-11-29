@@ -7,7 +7,7 @@
       </span>
     </div>
     <div class="booklist">
-      <sir-card width='47%' v-for="val in books" :key="val" style="margin:20px 0 0 2%; float:left;">
+      <sir-card class="cardbox" width='47%' v-for="val in books" :key="val" style="margin:20px 0 0 2%; float:left;">
         <div slot="cardHeader">
           <img class="cardHover" src="https://lain.bgm.tv/pic/cover/l/b9/45/240038_M7CB5.jpg" alt="">
         </div>
@@ -15,7 +15,7 @@
           <div class="card-title">青春期笨蛋不做兔女郎学姐的梦
             <i class="material-icons right">comment</i>
           </div>
-          <div class="card-title">
+          <div class="card-title smallcardtitle">
             <a href="https://github.com/yuanxin666/sir-zujian">
               ハクメイとミコチ</a>
           </div>
@@ -83,21 +83,31 @@ a {
 }
 
 .booklist {
-  .cardHover {
-    width: 50%;
-    height: 280px;
-  }
-  .card-title {
-    font-weight: 300;
-    .bookstyle();
-  }
-  .jindu {
-    background: #ff9e2c;
-    .bookstyle();
-    text-align: center;
-    height: 25px;
-    font-size: 20px;
-    color: #fff;
+  .cardbox {
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .cardHover {
+      width: 50%;
+      height: 280px;
+    }
+    .card-title {
+      font-weight: 300;
+      .bookstyle();
+    }
+    .jindu {
+      background: #ff9e2c;
+      .bookstyle();
+      text-align: center;
+      height: 25px;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .smallcardtitle{
+      font-size: 16px;
+    }
   }
 }
 </style>

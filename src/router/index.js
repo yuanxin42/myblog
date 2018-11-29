@@ -4,9 +4,7 @@ import index from '@/components/blogIndex.vue'
 import blogindex from '@/components/myIndex'
 import growthProcess from '@/components/growthProcess'
 import bookList from '@/components/bookList'
-import allComponents from '@/components/allComponents'
-import details from '@/components/allComponents/details'
-import compomentblock from '@/components/allComponents/compomentblock'
+import about from '@/components/about'
 Vue.use(Router)
 
 export default new Router({
@@ -30,22 +28,8 @@ export default new Router({
           component: bookList
         },
         {
-          path: 'allComponents',
-          component: allComponents,
-          children: [
-            {
-              path: '/',
-              component: compomentblock
-            },
-            {
-              path: 'details',
-              component: details
-            }
-          ]
-        },
-        {
-          path: '4',
-          component: allComponents
+          path: 'about',
+          component: about
         }
       ]
     }

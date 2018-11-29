@@ -32,9 +32,9 @@
         <sir-submenu class="submenu"><a href="bookList">清单</a></sir-submenu>
         <sir-submenu class="submenu">留言板</sir-submenu>
         <sir-submenu class="submenu">友人帐</sir-submenu>
-        <sir-submenu class="submenu">关于</sir-submenu>
-        <sir-submenu class="submenu">关于</sir-submenu>
-        <sir-submenu class="submenu">关于</sir-submenu>
+        <sir-submenu class="submenu"><a href="about">关于</a></sir-submenu>
+        <sir-submenu class="submenu"><a href="about">关于</a></sir-submenu>
+        <sir-submenu class="submenu"><a href="about">关于</a></sir-submenu>
       </div>
     </sir-navmenu>
     <sir-scrolltop></sir-scrolltop>

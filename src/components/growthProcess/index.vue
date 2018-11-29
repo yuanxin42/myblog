@@ -9,54 +9,27 @@
     <div class="growthProcessTitle">2018年知识清单</div>
     <sir-timeline>
       <sir-timelineTree titlewidth="150px" title='06月 (3篇文章)'>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/84256788">vue diff算法 patch</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/84256788">vue diff算法 patch</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
+        <sir-timelineItem v-for="val in arr" :key="val">
           <a href="https://blog.csdn.net/qq_37339364/article/details/84256788">vue diff算法 patch</a>
         </sir-timelineItem>
       </sir-timelineTree>
       <sir-timelineTree titlewidth="150px" title='07月 (3篇文章)'>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/83895492">浅谈javascript的Event Loop</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/83895492">浅谈javascript的Event Loop</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
+        <sir-timelineItem  v-for="val in arr" :key="val">
           <a href="https://blog.csdn.net/qq_37339364/article/details/83895492">浅谈javascript的Event Loop</a>
         </sir-timelineItem>
       </sir-timelineTree>
       <sir-timelineTree titlewidth="150px" title='08月 (2篇文章)'>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/82184247">Element组件二次封装—入门</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
+        <sir-timelineItem  v-for="val in arr" :key="val">
           <a href="https://blog.csdn.net/qq_37339364/article/details/82184247">Element组件二次封装—入门</a>
         </sir-timelineItem>
       </sir-timelineTree>
       <sir-timelineTree titlewidth="150px" title='09月 (3篇文章)'>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/82564223">npm run build发生了什么？</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/82564223">npm run build发生了什么？</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
+        <sir-timelineItem  v-for="val in arr" :key="val">
           <a href="https://blog.csdn.net/qq_37339364/article/details/82564223">npm run build发生了什么？</a>
         </sir-timelineItem>
       </sir-timelineTree>
             <sir-timelineTree titlewidth="150px" title='09月 (2篇文章)'>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/82086446">javascript之正则表达式的入门部分</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
-          <a href="https://blog.csdn.net/qq_37339364/article/details/82086446">javascript之正则表达式的入门部分</a>
-        </sir-timelineItem>
-        <sir-timelineItem>
+        <sir-timelineItem  v-for="val in arr" :key="val">
           <a href="https://blog.csdn.net/qq_37339364/article/details/82086446">javascript之正则表达式的入门部分</a>
         </sir-timelineItem>
       </sir-timelineTree>
@@ -68,7 +41,8 @@ export default {
   // name: 'HelloWorld',
   data () {
     return {
-      activeIndex: '1'
+      activeIndex: '1',
+      arr: [1, 2, 3]
     }
   },
   methods: {
