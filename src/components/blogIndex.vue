@@ -56,7 +56,7 @@ export default {
     menustyle () {
       let href = window.location.href
       let host = window.location.host
-      return href.split(host)[1] === '/'
+      return href.split(host)[1] === '/#/'
     }
   },
   methods: {
