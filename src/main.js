@@ -9,9 +9,7 @@ import sir from 'sirpackages'
 import axios from 'axios'
 
 import 'element-ui/lib/theme-chalk/index.css'
-import eleconfig from './components/elecomponent/index.js'
 Vue.prototype.$ajax = axios
-Vue.use(eleconfig)
 Vue.use(ElementUI)
 Vue.use(sir)
 

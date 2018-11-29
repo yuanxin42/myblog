@@ -29,7 +29,7 @@
         <sir-submenu class="submenu">
           <a href="growthProcess">成长历程</a>
         </sir-submenu>
-        <sir-submenu class="submenu">清单</sir-submenu>
+        <sir-submenu class="submenu"><a href="bookList">清单</a></sir-submenu>
         <sir-submenu class="submenu">留言板</sir-submenu>
         <sir-submenu class="submenu">友人帐</sir-submenu>
         <sir-submenu class="submenu">关于</sir-submenu>
