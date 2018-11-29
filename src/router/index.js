@@ -8,7 +8,6 @@ import about from '@/components/about'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
@@ -20,15 +19,18 @@ export default new Router({
           component: blogindex
         },
         {
-          path: 'growthProcess',
+          path: '/growthProcess',
+          name: 'growthProcess',
           component: growthProcess
         },
         {
-          path: 'bookList',
+          path: '/bookList',
+          name: 'bookList',
           component: bookList
         },
         {
-          path: 'about',
+          path: '/about',
+          name: 'about',
           component: about
         }
       ]

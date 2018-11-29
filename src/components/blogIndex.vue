@@ -24,17 +24,17 @@
       </div>
       <div slot="allsubmenu" class="blogitems">
         <sir-submenu class="submenu">
-          <a href="/">首页</a>
+          <router-link to="/">首页</router-link>
         </sir-submenu>
         <sir-submenu class="submenu">
-          <a href="growthProcess">成长历程</a>
+           <router-link to="/growthProcess">成长历程</router-link>
         </sir-submenu>
-        <sir-submenu class="submenu"><a href="bookList">清单</a></sir-submenu>
+        <sir-submenu class="submenu"><router-link to="/bookList">清单</router-link></sir-submenu>
         <sir-submenu class="submenu">留言板</sir-submenu>
         <sir-submenu class="submenu">友人帐</sir-submenu>
-        <sir-submenu class="submenu"><a href="about">关于</a></sir-submenu>
-        <sir-submenu class="submenu"><a href="about">关于</a></sir-submenu>
-        <sir-submenu class="submenu"><a href="about">关于</a></sir-submenu>
+        <sir-submenu class="submenu"><router-link to="/about">关于</router-link></sir-submenu>
+        <sir-submenu class="submenu"><router-link to="/about">关于</router-link></sir-submenu>
+        <sir-submenu class="submenu"><router-link to="/about">关于</router-link></sir-submenu>
       </div>
     </sir-navmenu>
     <sir-scrolltop></sir-scrolltop>

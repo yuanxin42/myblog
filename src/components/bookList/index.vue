@@ -31,7 +31,7 @@ export default {
   data () {
     return {
       activeIndex: '1',
-      books: [1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 7, 7, 7]
+      books: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     }
   },
   methods: {
@@ -89,7 +89,7 @@ a {
       box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .cardHover {
-      width: 50%;
+      width: 100%;
       height: 280px;
     }
     .card-title {

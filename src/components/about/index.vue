@@ -107,7 +107,7 @@ a {
             box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .cardHover {
-            width: 50%;
+            width: 100%;
             height: 280px;
         }
         .card-title {
