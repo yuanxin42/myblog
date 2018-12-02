@@ -23,54 +23,9 @@
         <div class="containCard">
             <h5 class="borderBottom"> Discovery</h5>
             <div>
-                <sir-card class="start-img" location='left' width='100%' height='300px'>
+                <sir-card v-for="(val,index) in imgarr" :key="index" class="start-img" :location='leftOrRignt(index)' width='100%' height='300px'>
                     <div slot="cardHeader">
-                        <img class="cardHover" style="height:300px" src="@/assets/image/1099193574-1024x684.jpg" alt="">
-                    </div>
-                    <div slot="cardFotter">
-                        <div class="cardTitle">
-                            <a href="https://github.com/yuanxin666/sir-zujian">
-                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-                        </div>
-                        <div class="cardTitle">
-                            <a href="https://github.com/yuanxin666/sir-zujian">
-                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-                        </div>
-                    </div>
-                </sir-card>
-                <sir-card class="start-img" location='right' width='100%' height='300px'>
-                    <div slot="cardHeader">
-                        <img class="cardHover" style="height:300px" src="@/assets/image/child-1024x576.jpg" alt="">
-                    </div>
-                    <div slot="cardFotter">
-                        <div class="cardTitle">
-                            <a href="https://github.com/yuanxin666/sir-zujian">
-                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-                        </div>
-                        <div class="cardTitle">
-                            <a href="https://github.com/yuanxin666/sir-zujian">
-                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-                        </div>
-                    </div>
-                </sir-card>
-                <sir-card class="start-img" location='left' width='100%' height='300px'>
-                    <div slot="cardHeader">
-                        <img class="cardHover" style="height:300px" src="@/assets/image/sakura-1024x576.jpg" alt="">
-                    </div>
-                    <div slot="cardFotter">
-                        <div class="cardTitle">
-                            <a href="https://github.com/yuanxin666/sir-zujian">
-                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-                        </div>
-                        <div class="cardTitle">
-                            <a href="https://github.com/yuanxin666/sir-zujian">
-                                360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-                        </div>
-                    </div>
-                </sir-card>
-                <sir-card class="start-img" location='right' width='100%' height='300px'>
-                    <div slot="cardHeader">
-                        <img class="cardHover" style="height:300px" src="@/assets/image/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.jpg" alt="">
+                        <img class="cardHover" style="height:300px" :src='val.src' alt="">
                     </div>
                     <div slot="cardFotter">
                         <div class="cardTitle">
@@ -93,17 +48,40 @@ export default {
   // name: 'HelloWorld',
   data () {
     return {
-      activeIndex: '1'
+      activeIndex: '1',
+      imgarr: [{
+        src: 'http://yyyxxxxin.top/myblog/static/img/1099193574-1024x684.29705cd.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/child-1024x576.ae26337.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/sakura-1024x576.6ca0f6a.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.f6c4e38.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/1099193574-1024x684.29705cd.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/child-1024x576.ae26337.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/sakura-1024x576.6ca0f6a.jpg'
+      }, {
+        src: 'http://yyyxxxxin.top/myblog/static/img/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.f6c4e38.jpg'
+      }]
     }
   },
+  computed: {
+  },
   methods: {
+    leftOrRignt (index) {
+      console.log(+index % 2)
+      return +index % 2 === 0 ? 'left' : 'right'
+    }
   }
 }
 </script>
 <style lang = 'less' scoped>
 .contain {
     width: 100%;
-    height: 2000px;
+    /* height: 2000px; */
     /*后续删掉*/
     overflow: hidden;
     background: #fff;
