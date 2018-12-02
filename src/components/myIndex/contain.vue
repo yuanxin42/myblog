@@ -23,9 +23,9 @@
         <div class="containCard">
             <h5 class="borderBottom"> Discovery</h5>
             <div>
-                <sir-card v-for="(val,index) in imgarr" :key="index" class="start-img" :location='leftOrRignt(index)' width='100%' height='300px'>
+                <sir-card v-for="(val,index) in imgarr" :key="index" :class="`start-img`" :location='leftOrRignt(index)' width='100%' height='300px'>
                     <div slot="cardHeader">
-                        <img class="cardHover" style="height:300px" :src='val.src' alt="">
+                        <img :class="`cardHover cardStyle${index}`" style="height:300px" :data='val.src' src='' alt="">
                     </div>
                     <div slot="cardFotter">
                         <div class="cardTitle">
@@ -65,7 +65,9 @@ export default {
         src: '/static/image/sakura-1024x576.jpg'
       }, {
         src: '/static/image/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.jpg'
-      }]
+      }],
+      scrollTop: '0px',
+      allImg: []
     }
   },
   computed: {
@@ -73,7 +75,62 @@ export default {
   methods: {
     leftOrRignt (index) {
       return +index % 2 === 0 ? 'left' : 'right'
+    },
+    handleScroll () {
+      let scroll = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight
+      if (Array.isArray(this.allImg)) {
+        this.allImg.forEach((val, index) => {
+          if (scroll > val.iTop) {
+            let element = document.querySelector(val.imgClass)
+            element.src = val.data
+          }
+        })
+      }
+    },
+    lazyLoading (dom, name) {
+      return name
+    },
+    getallImgHeight () {
+      this.imgarr.forEach((val, index) => {
+        let element = document.querySelector(`.cardStyle${index}`)
+        this.allImg.push({
+          imgClass: `.cardStyle${index}`,
+          iTop: this.getFixed(element),
+          data: element.getAttribute('data')
+        })
+      })
+    },
+    getFixed (obj) {
+      // 获取非行间属性
+      function getStyle (obj, styleName) {
+        if (obj.currentStyle) {
+          return obj.currentStyle[styleName]
+        } else {
+          return getComputedStyle(obj, null)[styleName]
+        }
+      }
+      // 要获取图片相对网页顶部的距离，但图片有被定位的父级
+      //   var iLeft = 0
+      var iTop = 0
+      var oParent = obj
+      while (oParent) {
+        if (oParent.tagName === 'HTML') {
+          break
+        }
+        // iLeft += oParent.offsetLeft
+        iTop += oParent.offsetTop
+        if (oParent !== obj) {
+          //   iLeft += parseInt(getStyle(oParent, 'borderWidth'))// offsetLeft不包括边框，因此要把边框加上
+          iTop += parseInt(getStyle(oParent, 'borderWidth'))
+        }
+        oParent = oParent.offsetParent
+      }
+      return iTop// 当 break 后itop就是图片相对网页顶部的距离
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+    this.getallImgHeight() // 懒加载
   }
 }
 </script>
