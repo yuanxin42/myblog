@@ -50,21 +50,21 @@ export default {
     return {
       activeIndex: '1',
       imgarr: [{
-        src: 'http://yyyxxxxin.top/myblog/static/img/1099193574-1024x684.29705cd.jpg'
+        src: '/static/image/1099193574-1024x684.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/child-1024x576.ae26337.jpg'
+        src: '/static/image/child-1024x576.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/sakura-1024x576.6ca0f6a.jpg'
+        src: '/static/image/sakura-1024x576.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.f6c4e38.jpg'
+        src: '/static/image/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/1099193574-1024x684.29705cd.jpg'
+        src: '/static/image/1099193574-1024x684.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/child-1024x576.ae26337.jpg'
+        src: '/static/image/child-1024x576.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/sakura-1024x576.6ca0f6a.jpg'
+        src: '/static/image/sakura-1024x576.jpg'
       }, {
-        src: 'http://yyyxxxxin.top/myblog/static/img/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.f6c4e38.jpg'
+        src: '/static/image/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp-1024x576.jpg'
       }]
     }
   },
@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     leftOrRignt (index) {
-      console.log(+index % 2)
       return +index % 2 === 0 ? 'left' : 'right'
     }
   }
