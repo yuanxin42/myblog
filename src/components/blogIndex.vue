@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import '../../static/css/normalize.css'
+import ProgressIndicator from '../../static/js/progress-indicator.js'
 export default {
   // name: 'HelloWorld',
   data () {
@@ -78,6 +80,8 @@ export default {
     foo: this.bar
   },
   mounted () {
+    var progressBar = new ProgressIndicator()
+    console.log(progressBar)
     this.$ajax.get('/getdata', {
       params: { // 请求参数
         id: 123
