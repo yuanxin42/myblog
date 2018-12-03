@@ -120,11 +120,14 @@ export default {
         // iLeft += oParent.offsetLeft
         iTop += oParent.offsetTop
         if (oParent !== obj) {
-          //   iLeft += parseInt(getStyle(oParent, 'borderWidth'))// offsetLeft不包括边框，因此要把边框加上
-          iTop += parseInt(getStyle(oParent, 'borderWidth'))
+          //   iLeft += parseInt(getStyle(oParent, 'borderWidth'))// offsetLeft不包括边框，因此要把边框加
+          if (typeof (parseInt(getStyle(oParent, 'borderWidth'))) === 'number' && !isNaN(parseInt(getStyle(oParent, 'borderWidth')))) {
+            iTop += parseInt(getStyle(oParent, 'borderWidth'))
+          }
         }
         oParent = oParent.offsetParent
       }
+
       return iTop// 当 break 后itop就是图片相对网页顶部的距离
     }
   },

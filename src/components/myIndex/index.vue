@@ -42,30 +42,30 @@ export default {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
     },
-    getlistdata () {
-      this.$ajax.get('/url').then(function (res) {
-        console.log(res)
-      }).catch(function (err) {
-        console.log(err)
-      })
-    },
+    // getlistdata () {
+    //   this.$ajax.get('/url').then(function (res) {
+    //     console.log(res)
+    //   }).catch(function (err) {
+    //     console.log(err)
+    //   })
+    // },
     toclick () {
       alert(2213)
     }
   },
   inject: ['foo'],
   mounted () {
-    this.$ajax.get('/getdata', {
-      params: { // 请求参数
-        id: 123
-      }
-    }).then(function (response) {
-      console.log(response)// 请求正确时执行的代码
-    }).catch(function (response) {
-      console.log(response)// 发生错误时执行的代码
-    })
-    // this.foo()
-    console.log(this.foo, '我是inject')
+    // this.$ajax.get('/getdata', {
+    //   params: { // 请求参数
+    //     id: 123
+    //   }
+    // }).then(function (response) {
+    //   console.log(response)// 请求正确时执行的代码
+    // }).catch(function (response) {
+    //   console.log(response)// 发生错误时执行的代码
+    // })
+    // // this.foo()
+    // console.log(this.foo, '我是inject')
   },
   components: {
     contain

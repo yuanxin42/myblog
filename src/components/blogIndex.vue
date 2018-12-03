@@ -65,13 +65,13 @@ export default {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
     },
-    getlistdata () {
-      this.$ajax.get('/url').then(function (res) {
-        console.log(res)
-      }).catch(function (err) {
-        console.log(err)
-      })
-    },
+    // getlistdata () {
+    //   this.$ajax.get('/url').then(function (res) {
+    //     console.log(res)
+    //   }).catch(function (err) {
+    //     console.log(err)
+    //   })
+    // },
     bar () {
       alert(213123)
     }
@@ -82,15 +82,15 @@ export default {
   mounted () {
     var progressBar = new ProgressIndicator()
     console.log(progressBar)
-    this.$ajax.get('/getdata', {
-      params: { // 请求参数
-        id: 123
-      }
-    }).then(function (response) {
-      console.log(response)// 请求正确时执行的代码
-    }).catch(function (response) {
-      console.log(response)// 发生错误时执行的代码
-    })
+    // this.$ajax.get('/getdata', {
+    //   params: { // 请求参数
+    //     id: 123
+    //   }
+    // }).then(function (response) {
+    //   console.log(response)// 请求正确时执行的代码
+    // }).catch(function (response) {
+    //   console.log(response)// 发生错误时执行的代码
+    // })
   }
 }
 </script>
