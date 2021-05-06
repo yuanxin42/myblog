@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.6",
-    "highcharts": "^6.1.1",
+    "highcharts": "^9.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "vue": "^2.5.2",
