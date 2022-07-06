@@ -6,8 +6,8 @@
 <script>
 export default {
   props: {
-    width: String | Number,
-    height: String | Number
+    width: [String, Number],
+    height: [String, Number]
   },
   data () {
     return {

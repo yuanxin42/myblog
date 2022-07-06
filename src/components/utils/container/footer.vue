@@ -7,10 +7,10 @@
 export default {
   name: 'sir-header',
   props: {
-    width: String | Number,
+    width: [String, Number],
     height: {
       default: '60px',
-      type: String | Number
+      type: [String, Number]
     }
   },
   data () {

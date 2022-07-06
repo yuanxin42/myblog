@@ -17,9 +17,9 @@ export default {
   props: {
     width: {
       default: '100%',
-      type: String | Number
+      type: [String, Number]
     },
-    height: String | Number,
+    height: [String, Number],
     label: String,
     name: String
   },

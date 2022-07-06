@@ -9,11 +9,11 @@ export default {
   props: {
     width: {
       default: 'auto',
-      type: String | Number
+      type: [String, Number]
     },
     height: {
       default: 'auto',
-      type: String | Number
+      type: [String, Number]
     },
     color: {
       default: '#fe9600',

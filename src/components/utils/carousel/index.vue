@@ -14,18 +14,18 @@
 </template>
 <script>
 export default {
-  name: 'carousel',
+  name: 'c-carousel',
   props: {
     width: {
-      type: String | Number,
+      type: [String, Number],
       default: '100%'
     },
     height: {
-      type: String | Number,
+      type: [String, Number],
       default: '100%'
     },
     time: {
-      type: String | Number,
+      type: [String, Number],
       default: '1500'
     }
   },

@@ -11,12 +11,13 @@
 <script>
 import Vue from 'vue'
 export default {
+  name: 'c-tabs',
   props: {
     width: {
       default: '100%',
-      type: String | Number
+      type: [String, Number]
     },
-    height: String | Number,
+    height: [String, Number],
     tabPosition: {
       default: 'top',
       type: String

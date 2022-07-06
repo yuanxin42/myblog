@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2019-03-04 16:18:38
- * @LastEditTime: 2020-01-16 11:38:23
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /myblog/src/components/utils/scrolltop/index.vue
- -->
 <template>
     <div :class="{scroll:true,scrolldown:isdown}">
         <a :href="sirSrc" class="scrollA">
@@ -16,11 +8,11 @@
 <script>
 export default {
   props: {
-    width: String | Number,
-    height: String | Number,
+    width: [String, Number],
+    height: [String, Number],
     scrollTop: {
       default: '400px',
-      type: String | Number
+      type: [String, Number]
     },
     sirSrc: {
       default: 'https://www.baidu.com',

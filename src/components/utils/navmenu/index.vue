@@ -11,9 +11,9 @@
 <script>
 export default {
   props: {
-    width: String | Number,
+    width: [String, Number],
     height: {
-      type: String | Number,
+      type: [String, Number],
       default: '70px'
     },
     sirbac: { //  默认的导航菜单背景

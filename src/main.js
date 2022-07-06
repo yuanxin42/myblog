@@ -1,31 +1,12 @@
-/*
- * @Author: your name
- * @Date: 2020-01-08 11:45:58
- * @LastEditTime : 2020-01-16 14:41:48
- * @LastEditors  : Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /myblog/src/main.js
- */
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-// https://segmentfault.com/a/1190000010291674
 import Vue from 'vue'
-import App from './App'
-import router from './router'
-import ElementUI from 'element-ui'
-import axios from 'axios'
+import App from './App.vue'
 import sir from './components/utils/index.js'
-import 'element-ui/lib/theme-chalk/index.css'
-Vue.prototype.$ajax = axios
-Vue.use(ElementUI)
-Vue.use(sir)
+import router from './router';
 
 Vue.config.productionTip = false
+Vue.use(sir)
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  render: (h) => h(App)
+}).$mount('#app');

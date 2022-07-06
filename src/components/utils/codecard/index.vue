@@ -27,9 +27,9 @@
 export default {
   name: 'sir-codecard',
   props: {
-    width: String | Number,
+    width: [String, Number],
     height: {
-      type: String | Number
+      type: [String, Number]
     }
   },
   data () {

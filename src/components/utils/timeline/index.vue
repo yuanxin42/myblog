@@ -5,23 +5,23 @@
 </template>
 <script>
 export default {
-  name: 'timeline',
+  name: 'time-line',
   props: {
     width: {
       default: 'auto',
-      type: String | Number
+      type: [String, Number]
     },
     height: {
       default: 'auto',
-      type: String | Number
+      type: [String, Number]
     },
     title: {
       default: '时间轴',
-      type: String | Number
+      type: [String, Number]
     },
     titlewidth: {
       default: '60px',
-      type: String | Number
+      type: [String, Number]
     }
   },
   data () {
