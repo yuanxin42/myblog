@@ -81,7 +81,7 @@ export default {
 .headertop {
   width: 100%;
   height: 100%;
-  background: url('https://cdn.jsdelivr.net/gh/moezx/cdn@3.5.2/cover/webp/199-bigskin-3.jpg.webp') no-repeat;
+  background: url('../../assets/image/199-bigskin-3.jpg') no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -139,7 +139,7 @@ export default {
   width: 500px;
   background: rgba(0, 0, 0, 0.7);
   height: auto;
-   border-radius: 10px;
+  border-radius: 10px;
   margin: 20px auto;
   text-align: center;
   font-size: 16px;

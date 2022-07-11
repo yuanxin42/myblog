@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'c-card',
+  name: "c-card",
   props: {
     width: {
       default: "100%",
@@ -35,8 +35,8 @@ export default {
     sirClass() {
       return {
         card: true,
-        carLocationLeft: this.location === "left",
-        carLocationRight: this.location === "right",
+        "card-location-left": this.location === "left",
+        "card-location-right": this.location === "right",
       };
     },
   },
@@ -46,7 +46,11 @@ export default {
 <style lang="less" scoped>
 @import "../../../assets/css/common.less";
 .card {
+  &:hover {
+    box-shadow: 0px 0px 10px #999;
+  }
   border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);
   overflow: hidden;
   .cardBlockHeader {
     overflow: hidden;
@@ -81,7 +85,7 @@ export default {
   }
 }
 
-.carLocationLeft {
+.card-location-left {
   display: flex;
   // justify-content:space-between;
   .cardBlockHeader {
@@ -91,7 +95,7 @@ export default {
     width: 50%;
   }
 }
-.carLocationRight {
+.card-location-right {
   .cardBlockHeader {
     width: 50%;
     float: right;

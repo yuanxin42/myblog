@@ -4,7 +4,7 @@
  * @LastEditTime : 2020-01-16 11:41:13
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /myblog/src/components/utils/tabs/tab.vue
+ * @FilePath: /myblog/src/components/common/tabs/tab.vue
  -->
 <template>
     <div class="tab" v-if="isname === name" :style="{width:width,height:height}" :slot="name">

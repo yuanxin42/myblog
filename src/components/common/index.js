@@ -4,7 +4,7 @@
  * @LastEditTime: 2020-01-16 11:37:19
  * @LastEditors: your name
  * @Description: In User Settings Edit
- * @FilePath: /myblog/src/components/utils/index.js
+ * @FilePath: /myblog/src/components/common/index.js
  */
 import card from './card'
 import container from './container/index'
@@ -16,13 +16,13 @@ import tabs from './tabs/index'
 import tab from './tabs/tab'
 import carousel from './carousel/index'
 import carouselItem from './carousel/carouselItem'
-import scrolltop from './scrolltop/index'
-import navmenu from './navmenu/index'
-import submenu from './navmenu/submenu'
-import codecard from './codecard/index'
-import timeline from './timeline/index'
-import timelineTree from './timeline/timelineTree'
-import timelineItem from './timeline/timelineItem'
+import scrollTop from './scrollTop/index'
+import navmenu from './navMenu/index'
+import subMenu from './navMenu/subMenu'
+import codeCard from './codeCard/index'
+import timeLine from './timeLine/index'
+import timeLineTree from './timeLine/timelineTree'
+import timeLineItem from './timeLine/timelineItem'
 
 export default {
   install: (Vue) => {
@@ -36,12 +36,12 @@ export default {
     Vue.component('sir-tab', tab)
     Vue.component('sir-carousel', carousel)
     Vue.component('sir-carousel-item', carouselItem)
-    Vue.component('sir-scrolltop', scrolltop)
+    Vue.component('sir-scrolltop', scrollTop)
     Vue.component('sir-navmenu', navmenu)
-    Vue.component('sir-submenu', submenu)
-    Vue.component('sir-codecard', codecard)
-    Vue.component('sir-timeline', timeline)
-    Vue.component('sir-timelineTree', timelineTree)
-    Vue.component('sir-timelineItem', timelineItem)
+    Vue.component('sir-submenu', subMenu)
+    Vue.component('sir-codecard', codeCard)
+    Vue.component('sir-timeline', timeLine)
+    Vue.component('sir-timelineTree', timeLineTree)
+    Vue.component('sir-timelineItem', timeLineItem)
   }
 }

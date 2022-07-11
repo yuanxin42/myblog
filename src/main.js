@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import sir from './components/utils/index.js'
+import sir from './components/common/index.js'
 import router from './router';
 
 Vue.config.productionTip = false
