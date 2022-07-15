@@ -1,14 +1,14 @@
 <template>
   <div class="index" >
-    <div class="headertop" >
-      <div class="focusinfo" @click="toclick">
+    <div class="header-top" >
+      <div class="focus-info" @click="toclick">
         <!-- <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, Mashiro!">diary</h1> -->
         <div class="header-info">
           <p>
             <i class="fa fa-quote-left"></i> You got to put the past behind you before you can move on.
             <i class="fa fa-quote-right"></i>
           </p>
-          <div class="top-social_v2">
+          <div class="top-social-v2">
             <ul class="top-social-logo">
               <li class="logo-left-btn"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg" alt=""></li>
               <li><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wechat.png" alt=""></li>
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="bolang-bg">
-        <div class="bolang1"></div>
+        <div class="bolang-contain"></div>
       </div>
     </div>
     <contain></contain>
@@ -78,7 +78,7 @@ export default {
   height: 100vh;
 }
 
-.headertop {
+.header-top {
   width: 100%;
   height: 100%;
   background: url('../../assets/image/199-bigskin-3.jpg') no-repeat;
@@ -104,7 +104,7 @@ export default {
   bottom: 0;
 }
 
-.bolang1 {
+.bolang-contain {
   /* transform: translateX(100%); */
   animation: bg 8s linear infinite;
   height: 75px;
@@ -115,7 +115,7 @@ export default {
   left: -100%;
 }
 
-.focusinfo {
+.focus-info {
   width: 800px;
   height: 230px;
   position: absolute;
@@ -152,7 +152,7 @@ export default {
   margin: 0 0 15px 0;
 }
 
-.top-social_v2 {}
+.top-social-v2 {}
 
 .top-social-logo {
   height: 40px;

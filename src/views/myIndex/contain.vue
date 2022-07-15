@@ -1,27 +1,27 @@
 <template>
   <div class="contain">
     <div class="contain-start">
-      <h5 class="borderBottom">START:DASH!!</h5>
+      <h5 class="border-bottom">START:DASH!!</h5>
       <div class="start-imgs">
         <sir-card class="start-img" width="240px">
-          <div slot="cardHeader">
-            <img class="cardHover" src="@/assets/image/sakura.md.png" alt="" />
+          <div slot="card-header">
+            <img class="card-hover" src="@/assets/image/sakura.md.png" alt="" />
           </div>
         </sir-card>
         <sir-card class="start-img" width="240px">
-          <div slot="cardHeader">
-            <img class="cardHover" src="@/assets/image/th(1).jpg" alt="" />
+          <div slot="card-header">
+            <img class="card-hover" src="@/assets/image/th(1).jpg" alt="" />
           </div>
         </sir-card>
         <sir-card class="start-img" width="240px">
-          <div slot="cardHeader">
-            <img class="cardHover" src="@/assets/image/th(3).jpg" alt="" />
+          <div slot="card-header">
+            <img class="card-hover" src="@/assets/image/th(3).jpg" alt="" />
           </div>
         </sir-card>
       </div>
     </div>
-    <div class="containCard">
-      <h5 class="borderBottom">things</h5>
+    <div class="contain-card">
+      <h5 class="border-bottom">things</h5>
       <div>
         <sir-card
           v-for="(val, index) in imgarr"
@@ -31,23 +31,23 @@
           width="100%"
           height="300px"
         >
-          <div slot="cardHeader">
+          <div slot="card-header">
             <img
-              :class="`cardHover cardStyle${index}`"
+              :class="`card-hover cardStyle${index}`"
               style="height: 300px"
               :data="val.src"
               :src="val.src"
               alt=""
             />
           </div>
-          <div slot="cardFotter">
-            <div class="cardTitle">
+          <div slot="card-fotter">
+            <div class="card-title">
               <a href="https://github.com/yuanxin666/sir-zujian">
                 360公司于上交所敲锣 成功回归A股360公司于上交所敲锣
                 成功回归A股360公司于上交所敲锣 成功回归A股</a
               >
             </div>
-            <div class="cardTitle">
+            <div class="card-title">
               <a href="https://github.com/yuanxin666/sir-zujian">
                 360公司于上交所敲锣 成功回归A股360公司于上交所敲锣
                 成功回归A股360公司于上交所敲锣 成功回归A股</a
@@ -149,7 +149,7 @@ export default {
   },
 };
 </script>
-<style lang = 'less' scoped>
+<style lang='less' scoped>
 .contain {
   width: 100%;
   /* height: 2000px; */
@@ -169,7 +169,7 @@ export default {
       border-radius: 10px;
       .start-img {
         border-radius: 10px;
-        .cardHover {
+        .card-hover {
           display: block;
           width: 100%;
           height: 160px !important;
@@ -178,7 +178,7 @@ export default {
       }
     }
   }
-  .containCard {
+  .contain-card {
     width: 780px;
     margin: 0 auto;
     .start-img {
@@ -192,7 +192,7 @@ h5 {
   padding: 15px 0 15px 0;
 }
 
-.borderBottom {
+.border-bottom {
   border-bottom: 1px solid #e6e6e6;
 }
 </style>

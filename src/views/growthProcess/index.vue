@@ -1,12 +1,12 @@
 <template>
-  <div class="growthProcess">
-    <div class="pageHeader">
+  <div class="growth-process">
+    <div class="page-header">
       <h1 class="cat-title">归档</h1>
       <span class="cat-des">
         <p>Archives</p>
       </span>
     </div>
-    <div class="growthProcessTitle">2018年知识清单</div>
+    <div class="growth-process-title">2018年知识清单</div>
     <sir-timeline>
       <sir-timelineTree titlewidth="150px" title="06月 (3篇文章)">
         <sir-timelineItem v-for="val in arr" :key="val">
@@ -63,18 +63,18 @@ a {
   color: #666;
   text-decoration: none;
 }
-.growthProcess {
+.growth-process {
   width: 1000px;
   margin: 0 auto;
   background: #fff;
   padding: 70px 20px 20px 20px;
   overflow: hidden;
-  .growthProcessTitle {
+  .growth-process-title {
     color: #676767;
     text-align: center;
     font-size: 20px;
   }
-  .pageHeader {
+  .page-header {
     width: 100%;
     height: 60px;
     margin-top: 30px;

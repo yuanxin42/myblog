@@ -1,11 +1,11 @@
 <template>
-  <div class="sir-carouselItem" :style="sirStyle">
+  <div class="sir-carousel-item" :style="sirStyle">
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  name: "sir-carouselItem",
+  name: "sir-carousel-item",
   props: {
     width: {
       default: "100%",
@@ -47,7 +47,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.sir-carouselItem {
+.sir-carousel-item {
   position: absolute;
   img {
     width: 100%;

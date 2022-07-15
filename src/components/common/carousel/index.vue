@@ -1,13 +1,13 @@
 <template>
   <div class="carousel" @mouseenter="enter()" @mouseleave="leave()" :style="sirStyle">
     <slot></slot>
-    <ul class="childitems">
-      <li :class="{childitem:true,showItem:index==isshow}" v-for="(val,index) in carousel" :key="index"></li>
+    <ul class="child-items">
+      <li :class="{'child-item':true,showItem:index==isshow}" v-for="(val,index) in carousel" :key="index"></li>
     </ul>
-    <div class="carouselBtn leftBtn">
+    <div class="carousel-btn left-btn">
       <span class="font" @click="runLeft">&lt;</span>
     </div>
-    <div class="carouselBtn rightBtn">
+    <div class="carousel-btn right-btn">
       <span class="font" @click="runRight">&gt;</span>
     </div>
   </div>
@@ -118,12 +118,12 @@ export default {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  .childitems {
+  .child-items {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    .childitem {
+    .child-item {
       width: 20px;
       height: 20px;
       background: #fff;
@@ -135,7 +135,7 @@ export default {
       background: orange;
     }
   }
-  .carouselBtn {
+  .carousel-btn {
     width: 5%;
     height: 20%;
     background: rgba(0, 0, 0, 0.7);
@@ -152,10 +152,10 @@ export default {
       font-size: 300%;
     }
   }
-  .leftBtn {
+  .left-btn {
     left: 2%;
   }
-  .rightBtn {
+  .right-btn {
     left: auto;
     right: 2%;
   }

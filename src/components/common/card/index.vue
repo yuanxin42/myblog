@@ -1,10 +1,10 @@
 <template>
   <div :class="sirClass" :style="sirStyle">
-    <div class="cardBlockHeader">
-      <slot name="cardHeader"></slot>
+    <div class="card-block-header">
+      <slot name="card-header"></slot>
     </div>
-    <div class="cardBlockFotter">
-      <slot name="cardFotter"></slot>
+    <div class="card-block-footer">
+      <slot name="card-footer"></slot>
     </div>
   </div>
 </template>
@@ -52,7 +52,7 @@ export default {
   border: 1px solid #e5e5e5;
   box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);
   overflow: hidden;
-  .cardBlockHeader {
+  .card-block-header {
     overflow: hidden;
     width: 100%;
     .cardHover {
@@ -64,7 +64,7 @@ export default {
       transform: scale(1.06);
     }
   }
-  .cardBlockFotter {
+  .card-block-footer {
     width: 100%;
     .cardTitle {
       margin: 12px;
@@ -88,19 +88,19 @@ export default {
 .card-location-left {
   display: flex;
   // justify-content:space-between;
-  .cardBlockHeader {
+  .card-block-header {
     width: 50%;
   }
-  .cardBlockFotter {
+  .card-block-footer {
     width: 50%;
   }
 }
 .card-location-right {
-  .cardBlockHeader {
+  .card-block-header {
     width: 50%;
     float: right;
   }
-  .cardBlockFotter {
+  .card-block-footer {
     width: 50%;
     float: left;
   }

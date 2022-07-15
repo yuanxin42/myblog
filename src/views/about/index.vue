@@ -1,5 +1,5 @@
 <template>
-    <div class="growthProcess">
+    <div class="growth-process">
         <img class="aboutImg" src="@/assets/image/about.png" alt="">
         <h1 class="aboutTit">关于</h1>
         <div class="pageHeader">
@@ -8,12 +8,12 @@
                 <p>虽然这些我都没看过</p>
             </span>
         </div>
-        <div class="booklist">
-            <sir-card class="cardbox" width='47%' v-for="val in books" :key="val" style="margin:20px 0 0 2%; float:left;">
-                <div slot="cardHeader">
+        <div class="book-list">
+            <sir-card class="card-box" width='47%' v-for="val in books" :key="val" style="margin:20px 0 0 2%; float:left;">
+                <div slot="card-header">
                     <img class="cardHover" src="../../assets/image/th(3).jpg" alt="">
                 </div>
-                <div slot="cardFotter">
+                <div slot="card-footer">
                     <div class="card-title">青春期笨蛋不做兔女郎学姐的梦
                         <i class="material-icons right">comment</i>
                     </div>
@@ -46,7 +46,7 @@ a {
     text-decoration: none
 }
 
-.growthProcess {
+.growth-process {
     width: 800px;
     margin: 0 auto;
     background: #fff;
@@ -100,8 +100,8 @@ a {
     font-size: 24px;
 }
 
-.booklist {
-    .cardbox {
+.book-list {
+    .card-box {
         transition: box-shadow 0.3s;
         &:hover {
             box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
