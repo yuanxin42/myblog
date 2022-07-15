@@ -11,7 +11,7 @@
         <div class="booklist">
             <sir-card class="cardbox" width='47%' v-for="val in books" :key="val" style="margin:20px 0 0 2%; float:left;">
                 <div slot="cardHeader">
-                    <img class="cardHover" src="https://lain.bgm.tv/pic/cover/l/b9/45/240038_M7CB5.jpg" alt="">
+                    <img class="cardHover" src="../../assets/image/th(3).jpg" alt="">
                 </div>
                 <div slot="cardFotter">
                     <div class="card-title">青春期笨蛋不做兔女郎学姐的梦

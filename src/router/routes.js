@@ -2,10 +2,11 @@
 // import index from '@/views/blogIndex.vue'
 // import blogindex from '@/views/myIndex'
 import index from '@/views/index.vue'
-import blogindex from '@/views/myIndex'
+import blogIndex from '@/views/myIndex'
 import growthProcess from '@/views/growthProcess'
 import bookList from '@/views/bookList'
 import about from '@/views/about'
+import leaveWord from '@/views/leaveWord'
 
 const routes = [
     {
@@ -15,7 +16,7 @@ const routes = [
         children: [
             {
                 path: '/',
-                component: blogindex
+                component: blogIndex
             },
             {
                 path: '/growthProcess',
@@ -31,7 +32,12 @@ const routes = [
                 path: '/about',
                 name: 'about',
                 component: about
-            }
+            },
+            {
+                path: '/leaveWord',
+                name: 'leaveWord',
+                component: leaveWord
+            },
         ]
     }
 ]

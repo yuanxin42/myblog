@@ -1,25 +1,16 @@
 <template>
   <div class="blog">
-    <!-- :issetlocation='menustyle' -->
-    <sir-navmenu class="sir-navmenu" :sirbac="menustyle?'transparent':'#fff'" declinecolor='#fff'  :isdeclinebackground='true'>
+    <sir-navmenu
+      class="sir-navmenu"
+      :sirbac="menustyle ? 'transparent' : '#fff'"
+      declinecolor="#fff"
+      :isdeclinebackground="true"
+    >
       <div slot="navtop">
         <a class="logolink" href="https://2heng.xin" alt="樱花庄的白猫">
-          <span class="sakurasono"> さくら
-            <ruby style="ruby-position:over;">荘
-              <rp></rp>
-              <rt>そ</rt>
-              <rp></rp>
-            </ruby>の</span>
-          <span class="shironeko">
-            <ruby style="ruby-position:over;">白
-              <rp></rp>
-              <rt>しろ</rt>
-              <rp></rp>猫
-              <rp></rp>
-              <rt>ねこ</rt>
-              <rp></rp>
-            </ruby>
-          </span>
+          <span class="sakurasono">
+            原蓦然 <ruby style="ruby-position: over"> の日记 </ruby></span
+          >
         </a>
       </div>
       <div slot="allsubmenu" class="blogitems">
@@ -27,42 +18,44 @@
           <router-link to="/">首页</router-link>
         </sir-submenu>
         <sir-submenu class="submenu">
-           <router-link to="/growthProcess">成长历程</router-link>
+          <router-link to="/growthProcess">成长历程</router-link>
         </sir-submenu>
-        <sir-submenu class="submenu"><router-link to="/bookList">清单</router-link></sir-submenu>
-        <sir-submenu class="submenu">留言板</sir-submenu>
-        <sir-submenu class="submenu">友人帐</sir-submenu>
-        <sir-submenu class="submenu"><router-link to="/about">关于</router-link></sir-submenu>
-        <sir-submenu class="submenu"><router-link to="/about">关于</router-link></sir-submenu>
-        <sir-submenu class="submenu"><router-link to="/about">关于</router-link></sir-submenu>
+        <sir-submenu class="submenu"
+          ><router-link to="/bookList">清单</router-link></sir-submenu
+        >
+        <sir-submenu class="submenu"
+          ><router-link to="/leaveWord">留言板</router-link></sir-submenu
+        >
+        <sir-submenu class="submenu"
+          ><router-link to="/about">关于</router-link></sir-submenu
+        >
       </div>
     </sir-navmenu>
     <sir-scrolltop></sir-scrolltop>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import ProgressIndicator from '@/assets/js/progress-indicator.js'
+import ProgressIndicator from "@/assets/js/progress-indicator.js";
 export default {
   // name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      activeIndex: '1'
-    }
+      activeIndex: "1",
+    };
   },
-  watch: {
-  },
+  watch: {},
   computed: {
-    menustyle () {
-      let href = window.location.href
-      let host = window.location.host
-      return href.split(host)[1] === '/#/'
-    }
+    menustyle() {
+      let href = window.location.href;
+      let host = window.location.host;
+      return href.split(host)[1] === "/#/";
+    },
   },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
     },
     // getlistdata () {
     //   this.$ajax.get('/url').then(function (res) {
@@ -71,16 +64,16 @@ export default {
     //     console.log(err)
     //   })
     // },
-    bar () {
-      alert(213123)
-    }
+    bar() {
+      alert(213123);
+    },
   },
   // provide: {
   //   foo: this.bar
   // },
-  mounted () {
-    var progressBar = new ProgressIndicator()
-    console.log(progressBar)
+  mounted() {
+    var progressBar = new ProgressIndicator();
+    console.log(progressBar);
     // this.$ajax.get('/getdata', {
     //   params: { // 请求参数
     //     id: 123
@@ -90,8 +83,8 @@ export default {
     // }).catch(function (response) {
     //   console.log(response)// 发生错误时执行的代码
     // })
-  }
-}
+  },
+};
 </script>
 
 <style lang='less' scoped>
@@ -105,7 +98,7 @@ a {
 .blog {
   width: 100%;
   height: 100%;
-  text-shadow: 0 0 1px rgba(0, 0, 0, .1);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .logolink {
@@ -122,7 +115,7 @@ a {
 }
 
 .sakurasono {
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   color: #464646;
   height: auto;
