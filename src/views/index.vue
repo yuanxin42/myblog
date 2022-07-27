@@ -9,7 +9,7 @@
     >
       <div slot="navtop">
         <!-- https://2heng.xin -->
-        <a class="logo-link" href="/" alt="博客">
+        <a class="logo-link" href="/" alt="日记">
           <span class="sakura-sono">
             原蓦然<ruby style="ruby-position: over">の日记 </ruby></span
           >
@@ -50,10 +50,6 @@ export default {
   watch: {
     $route: {
       handler() {
-        console.log(
-          this.$router.currentRoute.fullPath,
-          "this.$router.currentRoute.fullPath"
-        );
         this.showMenu = !["/", "/leaveWord"].includes(
           this.$router.currentRoute.fullPath
         );

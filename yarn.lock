@@ -3216,6 +3216,11 @@
   dependencies:
     "websocket-driver" ">=0.5.1"
 
+"fetch-s@^1.3.1":
+  "integrity" "sha512-ATtyc3j2l2q3cQmnBPI3SOBIlgooQ6LLD/CnI5pD1sYRjcRiPrYMs7OHFUE/tZ2s3AvrEyeswZ1q2y2oZoqu0Q=="
+  "resolved" "https://registry.npmjs.org/fetch-s/-/fetch-s-1.3.1.tgz"
+  "version" "1.3.1"
+
 "figures@^2.0.0":
   "integrity" "sha512-Oa2M9atig69ZkfwiApY8F2Yy+tzMbazyvqv21R0NsSC8floSOC09BbT1ITWAdoMGQvJ/aZnR1KMwdx9tvHnTNA=="
   "resolved" "https://registry.npmmirror.com/figures/-/figures-2.0.0.tgz"

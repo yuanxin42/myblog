@@ -194,5 +194,6 @@ h5 {
 
 .border-bottom {
   border-bottom: 1px solid #e6e6e6;
+  text-align: center;
 }
 </style>

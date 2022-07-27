@@ -6,13 +6,18 @@
       <el-form
         ref="form"
         :model="form"
-        label-width="80px"
+        :rules="rules"
+        label-width="100px"
         label-position="left"
       >
-        <el-form-item label="标题:">
-          <el-input style="width: 300px" v-model="form.title" placeholder="请输入内容"></el-input>
+        <el-form-item label="标题:" prop="title">
+          <el-input
+            style="width: 300px"
+            v-model="form.title"
+            placeholder="请输入内容"
+          ></el-input>
         </el-form-item>
-        <el-form-item label="照片:">
+        <el-form-item label="+ 照片:">
           <el-upload
             class="upload-demo"
             action="/posts/"
@@ -30,7 +35,7 @@
             </div>
           </el-upload>
         </el-form-item>
-        <el-form-item label="想说的话:">
+        <el-form-item label="想说的话:" prop="describe">
           <el-input
             style="width: 500px"
             v-model="form.describe"
@@ -47,8 +52,17 @@
   </div>
 </template>
 <script>
+import { sendLeaveWord } from "@/api/leaveWord";
+
+// 未填写完成
+const RuleCondition = [{ required: true, message: "未填写完成" }];
+
+// 表单校验规则
+const rules = {
+  title: RuleCondition,
+  describe: RuleCondition,
+};
 export default {
-  // name: 'HelloWorld',
   data() {
     return {
       form: {
@@ -65,10 +79,16 @@ export default {
           },
         ],
       },
+      rules,
     };
   },
   methods: {
-    onSubmit() {},
+    /**
+     * 提交留言板
+     */    
+    onSubmit() {
+      sendLeaveWord();
+    },
     handleRemove(file, fileList) {
       console.log(file, fileList);
     },
