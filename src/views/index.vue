@@ -8,7 +8,8 @@
       :isdeclinebackground="true"
     >
       <div slot="navtop">
-        <a class="logo-link" href="https://2heng.xin" alt="樱花庄的白猫">
+        <!-- https://2heng.xin -->
+        <a class="logo-link" href="/" alt="博客">
           <span class="sakura-sono">
             原蓦然<ruby style="ruby-position: over">の日记 </ruby></span
           >
@@ -57,7 +58,7 @@ export default {
           this.$router.currentRoute.fullPath
         );
       },
-      immediate: true
+      immediate: true,
     },
   },
   computed: {

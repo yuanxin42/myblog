@@ -20,7 +20,7 @@ export default {
       type: [String, Number]
     },
     titlewidth: {
-      default: '60px',
+      default: '150px',
       type: [String, Number]
     }
   },

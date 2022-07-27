@@ -1,7 +1,7 @@
 <template>
   <div class="contain">
     <div class="contain-start">
-      <h5 class="border-bottom">START:DASH!!</h5>
+      <h5 class="border-bottom">MEMORIES!!</h5>
       <div class="start-imgs">
         <sir-card class="start-img" width="240px">
           <div slot="card-header">
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="contain-card">
-      <h5 class="border-bottom">things</h5>
+      <h5 class="border-bottom">THINGS!!</h5>
       <div>
         <sir-card
           v-for="(val, index) in imgarr"

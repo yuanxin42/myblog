@@ -4,6 +4,7 @@
 ```
 yarn install
 ```
+## 主题色 #FF9C40
 
 ### Compiles and hot-reloads for development
 ```

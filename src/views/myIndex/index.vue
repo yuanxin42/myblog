@@ -50,7 +50,7 @@ export default {
     //   })
     // },
     toclick () {
-      alert(2213)
+      // alert(2213)
     }
   },
   // inject: ['foo'],
@@ -72,7 +72,7 @@ export default {
   }
 }
 </script>
-<style lang = 'less' scoped>
+<style lang='less' scoped>
 .index {
   width: 100%;
   height: 100vh;
@@ -162,6 +162,7 @@ export default {
     line-height: 40px;
     float: left;
     cursor: pointer auto !important;
+    list-style: none;
   }
   .logo-left-btn {
     img {
