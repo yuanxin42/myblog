@@ -2,14 +2,15 @@
   <div class="blog">
     <sir-navmenu
       class="sir-navmenu"
-      :sirbac="menustyle ? 'transparent' : '#fff'"
+      sirbac="transparent"
       declinecolor="#fff"
+      :inTopShowMenus="showMenu"
       :isdeclinebackground="true"
     >
       <div slot="navtop">
-        <a class="logolink" href="https://2heng.xin" alt="樱花庄的白猫">
-          <span class="sakurasono">
-            原蓦然 <ruby style="ruby-position: over"> の日记 </ruby></span
+        <a class="logo-link" href="https://2heng.xin" alt="樱花庄的白猫">
+          <span class="sakura-sono">
+            原蓦然<ruby style="ruby-position: over">の日记 </ruby></span
           >
         </a>
       </div>
@@ -39,31 +40,34 @@
 <script>
 import ProgressIndicator from "@/assets/js/progress-indicator.js";
 export default {
-  // name: 'HelloWorld',
   data() {
     return {
       activeIndex: "1",
+      showMenu: true,
     };
   },
-  watch: {},
-  computed: {
-    menustyle() {
-      let href = window.location.href;
-      let host = window.location.host;
-      return href.split(host)[1] === "/#/";
+  watch: {
+    $route: {
+      handler() {
+        console.log(
+          this.$router.currentRoute.fullPath,
+          "this.$router.currentRoute.fullPath"
+        );
+        this.showMenu = !["/", "/leaveWord"].includes(
+          this.$router.currentRoute.fullPath
+        );
+      },
+      immediate: true
     },
+  },
+  computed: {
+    // showMenu() {
+    // },
   },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-    // getlistdata () {
-    //   this.$ajax.get('/url').then(function (res) {
-    //     console.log(res)
-    //   }).catch(function (err) {
-    //     console.log(err)
-    //   })
-    // },
     bar() {
       alert(213123);
     },
@@ -72,24 +76,13 @@ export default {
   //   foo: this.bar
   // },
   mounted() {
-    var progressBar = new ProgressIndicator();
-    console.log(progressBar);
-    // this.$ajax.get('/getdata', {
-    //   params: { // 请求参数
-    //     id: 123
-    //   }
-    // }).then(function (response) {
-    //   console.log(response)// 请求正确时执行的代码
-    // }).catch(function (response) {
-    //   console.log(response)// 发生错误时执行的代码
-    // })
+    new ProgressIndicator();
   },
 };
 </script>
 
 <style lang='less' scoped>
 a {
-  color: #666;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -101,7 +94,7 @@ a {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
-.logolink {
+.logo-link {
   color: #464646;
   float: left;
   font-size: 20px;
@@ -114,15 +107,14 @@ a {
   text-decoration-line: none;
 }
 
-.sakurasono {
+.sakura-sono {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   color: #464646;
   height: auto;
   line-height: 25px;
   margin-right: 0;
-  padding-bottom: 0;
-  padding-top: 1px;
+  padding: 1px 10px;
   text-size-adjust: 100%;
   width: auto;
 }
